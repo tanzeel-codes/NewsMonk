@@ -1,0 +1,35 @@
+:root {
+    --light-theme: white;
+    --dark-theme: rgb(30, 30, 41);
+
+
+    --bg-primary: white;
+    --bg-secondary: #f0f0f0;
+
+    --text-brand: #111111;
+
+    --text-primary: #111111;
+    --text-secondary: #666666;
+
+    --btn-text: white;
+    
+    --border-color: #111111;
+    
+    --accent: black;
+}
+
+[data-theme='dark'] {
+    --bg-primary: rgb(30, 30, 41);
+    --bg-secondary: #1e1e1e;
+    
+    --text-brand: wheat;
+
+    --btn-text: white;
+    
+    --text-primary: #ffffff;
+    --text-secondary: #aaaaaa;
+    
+    --border-color: #dddddd;
+    
+    --accent: #2563eb;
+}

@@ -1,0 +1,55 @@
+/* Container for the switch */
+.theme-switch {
+  display: inline-block;
+  height: 15px;
+  position: relative;
+  width: 30px;
+  /* margin-left: 5px; */
+}
+
+/* Hide default HTML checkbox */
+.theme-switch input {
+  display: none;
+}
+
+/* The visual slider track */
+.slider {
+  background-color: #ccc;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: .4s;
+}
+
+/* The sliding knob */
+.slider:before {
+  background-color: white;
+  /* bottom: 4px; */
+  content: "";
+  height: 15px;
+  /* left: 4px; */
+  position: absolute;
+  transition: .4s;
+  width: 15px;
+}
+
+/* Track color when checkbox is checked */
+input:checked + .slider {
+  background-color: #2794ee;
+}
+
+/* Move the knob forward when checked */
+input:checked + .slider:before {
+  transform: translateX(15px);
+}
+
+/* Rounded track and knob */
+.slider.round {
+  border-radius: 34px;
+}
+.slider.round:before {
+  border-radius: 50%;
+}

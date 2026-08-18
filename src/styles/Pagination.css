@@ -1,0 +1,31 @@
+.pagination-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    color: var(--text-primary);
+
+    height: 50px;
+    padding-left: clamp(16px, 4vw, 60px);
+    padding-right: clamp(16px, 4vw, 60px);
+}
+
+
+.nav-btn {
+    background-color: var(--accent);
+    color: var(--btn-text);
+    
+    padding: 8px 20px;
+    border-radius: 4px;
+    border: none;
+
+    font-size: 13px;
+    text-decoration: none;
+
+    cursor: pointer;
+
+}
+
+.nav-btn:disabled {
+    opacity: 0.5;
+}

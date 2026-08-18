@@ -1,0 +1,128 @@
+.header {
+    color: var(--text-primary);
+    margin-top: 10px;
+    font-size: 30px;
+    font-weight: bold;
+
+    text-align: center;
+}
+
+/* Each news container*/
+.news-container {
+    display: grid;          /* Making this Grid*/
+    grid-template-columns: repeat(3, 1fr);
+
+    padding: 25px;
+
+    row-gap: 60px;
+    column-gap: 20px;
+
+    
+}
+
+/* Each news card further divided into two
+    First row - news preview image
+    Second row - news info */
+    .news-card {
+    display: flex;
+    flex-direction: column;
+
+    border: 1px solid var(--border-color);
+
+    /* can be removed below*/
+    height: 100%;
+
+}
+
+/* News preview image */
+.news-image {
+    width: 100%;                
+    height : 100%;             
+    height: clamp(180px, 20vw, 350px);
+    object-fit: cover;  
+    
+}
+
+/* This row contains (news info) and (read-more anchor)*/
+.news-info-row {
+    display: flex;              
+    flex-direction: column;     
+    flex: 1;
+}
+
+/* This contains news Title and Description */
+.news-info {
+    padding: 10px;
+}
+
+/* News Title */
+.newstitle {
+    margin-bottom: 10px;
+    font-weight: bold;
+
+    line-height: 1.4;
+
+      min-height: calc(2 * 1.4em);
+
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
+.newstitle,
+.news-description {
+    color: var(--text-primary);
+}
+
+/* Readmore anchor container */
+.readmore {
+    margin-top: auto;       
+    align-self: flex-end;
+}
+
+/* Actual anchor */
+.readmore-btn {
+    background-color: var(--accent);
+    color: var(--btn-text);
+    
+    padding: 8px 16px;
+    
+    margin: 3px;
+    
+    border-radius: 6px;
+    
+    font-size: 13px;
+    text-decoration: none;
+    text-align: right;
+
+    display: inline-block;
+}
+
+
+/* For mobile dimension*/
+@media (max-width: 450px) {
+    .news-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+
+@media (min-width: 451px) and (max-width: 870px) {
+    .news-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (min-width: 870px) and (max-width: 999px) {
+    .news-container{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1000px) {
+    .news-container{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
