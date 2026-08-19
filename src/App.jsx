@@ -3,6 +3,7 @@ import './App.css'
 import Navbar from './components/Navbar'
 import News from './components/News'
 import './styles/Global.css'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 export default class App extends Component {
 
@@ -35,16 +36,76 @@ export default class App extends Component {
 
     return (
       <>
+      <BrowserRouter>
         <div data-theme={this.state.theme}>
           <Navbar
             toggleTheme={this.toggleTheme}
-            />
-
-          <News 
-            pageSize={20}
-            category="science"
           />
+
+          <Routes>
+            <Route 
+              exact path='/'
+              element={
+                <News
+                  key="general"
+                  pageSize={20}
+                  category="general"
+                />
+              }
+            />
+            <Route 
+              exact path='/business'
+              element={
+                <News 
+                  key="business"
+                  pageSize={20}
+                  category="business"
+                />
+              }
+            />
+            <Route 
+              exact path='/entertainment'
+              element={
+                <News
+                  key="entertainment"
+                  pageSize={20}
+                  category="entertainment"
+                />
+              }
+            />
+            <Route 
+              exact path='/health'
+              element={
+                <News
+                  key="health"
+                  pageSize={20}
+                  category="health"
+                />
+              }
+            />
+            <Route 
+              exact path='/science'
+              element={
+                <News
+                  key="science" 
+                  pageSize={20}
+                  category="science"
+                />
+              }
+            />
+            <Route 
+              exact path='/sports'
+              element={
+                <News
+                  key="sports" 
+                  pageSize={20}
+                  category="sports"
+                />
+              }
+            />
+          </Routes>
         </div>
+      </BrowserRouter>
       </>
     )
   }

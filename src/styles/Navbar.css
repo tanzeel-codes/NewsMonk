@@ -59,7 +59,9 @@
 .nav-link {
     font-size: 13px;
     font-weight: normal;
-
+    
+    text-decoration: none;
+    color: var(--text-secondary);
     cursor: pointer;
 }
 
@@ -124,11 +126,11 @@
     .nav-item {
       width: 100%;
     }
- 
+    
     .nav-link {
-      display: block;
-      padding: 10px 0;
-      font-size: 15px;
+        display: block;
+        padding: 10px 0;
+        font-size: 15px;
     }
 
     .nav-link:hover {

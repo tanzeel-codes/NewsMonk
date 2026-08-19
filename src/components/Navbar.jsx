@@ -1,6 +1,7 @@
 import { Component } from 'react'
 import '../styles/Navbar.css'
 import '../styles/ThemeSwitch.css'
+import { Link } from 'react-router-dom';
 
 export default class Navbar extends Component {
 
@@ -30,14 +31,13 @@ export default class Navbar extends Component {
         </div>
 
         <ul className="nav-links">
-          <li className="nav-item"><a className='nav-link'>Home</a></li>
-          <li className="nav-item"><a className="nav-link">About</a></li>
-          <li className="nav-item"><a className="nav-link">Business</a></li>
-          <li className="nav-item"><a className="nav-link">Entertainment</a></li>
-          <li className="nav-item"><a className="nav-link">Health</a></li>
-          <li className="nav-item"><a className="nav-link">Science</a></li>
-          <li className="nav-item"><a className="nav-link">Sports</a></li>
-          <li className="nav-item"><a className="nav-link">General</a></li>
+          <li className="nav-item"><Link className='nav-link' to='/'>Home</Link></li>
+          <li className="nav-item"><Link className="nav-link" to='/'>General</Link></li>
+          <li className="nav-item"><Link className="nav-link" to='/business'>Business</Link></li>
+          <li className="nav-item"><Link className="nav-link" to='/entertainment'>Entertainment</Link></li>
+          <li className="nav-item"><Link className="nav-link" to='/health'>Health</Link></li>
+          <li className="nav-item"><Link className="nav-link" to='/science'>Science</Link></li>
+          <li className="nav-item"><Link className="nav-link" to='/sports'>Sports</Link></li>
         </ul>
 
         <div className="right-side">
