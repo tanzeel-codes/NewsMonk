@@ -32,16 +32,19 @@ export default class App extends Component {
   };
   
   render() {
-      return (
-          <>
-          <Navbar
-            theme={this.state.theme}
-            toggleTheme={this.toggleTheme}
-          />
-          <News 
-            theme={this.state.theme}
-          />
 
+    return (
+      <>
+        <div data-theme={this.state.theme}>
+          <Navbar
+            toggleTheme={this.toggleTheme}
+            />
+
+          <News 
+            pageSize={20}
+            category="science"
+          />
+        </div>
       </>
     )
   }

@@ -10,7 +10,6 @@
     padding-right: clamp(16px, 4vw, 60px);
 }
 
-
 .nav-btn {
     background-color: var(--accent);
     color: var(--btn-text);

@@ -6,6 +6,8 @@
     --bg-primary: white;
     --bg-secondary: #f0f0f0;
 
+    --bg-hover: rgb(219, 219, 219);
+
     --text-brand: #111111;
 
     --text-primary: #111111;
@@ -21,6 +23,8 @@
 [data-theme='dark'] {
     --bg-primary: rgb(30, 30, 41);
     --bg-secondary: #1e1e1e;
+
+    --bg-hover: rgb(82, 81, 81);
     
     --text-brand: wheat;
 

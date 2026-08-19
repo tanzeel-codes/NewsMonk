@@ -3,16 +3,16 @@ import '../styles/Pagination.css'
 
 export default class Pagination extends Component {
     
-
     render() {
-        let {theme, handleNext, handlePrev, page, nextPageAvail} = this.props;
+        let { handleNext, handlePrev, page } = this.props;
         return (
             <>
-            <div className='pagination-container' data-theme={theme}>
+            <div className='pagination-container'>
                 <button disabled={page <= 1} className='nav-btn' onClick={handlePrev} >
                     &larr; Previous
                 </button>
-                <button disabled={nextPageAvail} className="nav-btn" onClick={handleNext}>
+                {/* the api has limits to page 5 i hardcoded it, since this is project not for others */}
+                <button disabled={page >= 5} className="nav-btn" onClick={handleNext}>
                     Next &rarr;
                 </button>
             </div>

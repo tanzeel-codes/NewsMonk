@@ -4,11 +4,10 @@ import defaultPreview from "../assets/images.jpg";
 
 export default class NewsItem extends Component {
   render() {
-
-    let {title, description, imageUrl, newsUrl, keys} = this.props;
+    let {title, description, imageUrl, newsUrl} = this.props;
 
     return (
-      <div className="news-card" keys={keys}>
+      <div className="news-card">
         <div>
             <img 
               className='news-image' 
